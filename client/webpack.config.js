@@ -17,33 +17,43 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // TODO: Add and configure workbox plugins for a service worker and manifest file.
+      //  Add and configure workbox plugins for a service worker and manifest file.
       //webpack plugin that generates the html files and injects the bundles
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Contact Cards'
+        title: 'J.A.T.E.'
       }),
 
       //inject custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'sec-sw.js',
+        swDest: 'src-sw.js',
       }),
 
       //create a manifest.json file
       new WebpackPwaManifest({
+        background_color: 'lightgray',
+        theme_color:'teal',
         fingerprints: false,
         inject: true,
-        name: 'Text Editor',
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E',
         description: 'Edit your text and keep it.',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
       })
     ],
 
     module: {
 
-    // TODO: Add CSS loaders and babel to webpack.`
+    //  Add CSS loaders and babel to webpack.`
     //adding the loaders and babel to webpack
       rules: [
         {
@@ -58,7 +68,7 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presents: ['@babel/preset-env'],
+              presets: ['@babel/preset-env'],
               plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },

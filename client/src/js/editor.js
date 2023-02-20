@@ -4,6 +4,7 @@ import { header } from './header';
 
 export default class {
   constructor() {
+    //gets content from local storage
     const localData = localStorage.getItem('content');
 
     // check if CodeMirror is loaded
@@ -11,6 +12,7 @@ export default class {
       throw new Error('CodeMirror is not loaded');
     }
 
+    //initiates CodeMirror open source for text editing
     this.editor = CodeMirror(document.querySelector('#main'), {
       value: '',
       mode: 'javascript',
@@ -26,10 +28,13 @@ export default class {
     // Fall back to localStorage if nothing is stored in indexeddb, and if neither is available, set the value to header.
     getDb().then((data) => {
       console.info('Loaded data from IndexedDB, injecting into editor');
+      console.log('data: ',data);
+      console.log('header: ', header);
+      console.log('localData: ',localData);
       //manipulate data and see if it is empty maybe?
       this.editor.setValue(data || localData || header);
     });
-
+    //upon change on editor save it to localstorage if empty create the key in local storage and store current value
     this.editor.on('change', () => {
       localStorage.setItem('content', this.editor.getValue());
     });
