@@ -30,4 +30,4 @@ if ('serviceWorker' in navigator) {
   workboxSW.register();
 } else {
   console.error('Service workers are not supported in this browser.');
-}
+};

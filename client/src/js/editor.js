@@ -28,18 +28,26 @@ export default class {
     // Fall back to localStorage if nothing is stored in indexeddb, and if neither is available, set the value to header.
     getDb().then((data) => {
       console.info('Loaded data from IndexedDB, injecting into editor');
-      console.log('data: ',data);
-      console.log('header: ', header);
-      console.log('localData: ',localData);
+      console.log('editor.js data: ',data);
+      console.log('editor.js header: ', header);
+      console.log('editor.js localData: ',localData);
       //manipulate data and see if it is empty maybe?
-      this.editor.setValue(data || localData || header);
+      if (data!==/\s/){
+        this.editor.setValue(data); 
+      }
+      else if (localData!==/\s/){
+        this.editor.setValue(localData);
+      }
+      else{
+      this.editor.setValue(header);
+      }
     });
     //upon change on editor save it to localstorage if empty create the key in local storage and store current value
     this.editor.on('change', () => {
       localStorage.setItem('content', this.editor.getValue());
     });
 
-    // Save the content of the editor when the editor itself is loses focus
+    // Save the content of the editor when the editor itself loses focus
     this.editor.on('blur', () => {
       console.log('The editor has lost focus');
       putDb(localStorage.getItem('content'));

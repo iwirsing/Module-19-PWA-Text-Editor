@@ -17,7 +17,7 @@ const initdb = async () =>
 export const putDb = async (content) =>{
   // try{
     //create connection to the jate database version 1
-    console.log('PUT to the database');
+    console.log('PUT to the database: ',content);
     const jateDb = await openDB('jate', 1);
 
     //create a new transaction and the db and the data privilege/permission of read and write
@@ -32,7 +32,7 @@ export const putDb = async (content) =>{
 
     //confirm the request
     const result = await request;
-    console.log(' text saved into the database', result.value)
+    console.log(' text saved into the database', result);
 
   // } catch (error){
     // console.error('putDb not implemented: ', error);
@@ -44,7 +44,7 @@ export const putDb = async (content) =>{
 export const getDb = async () => {
   // try{
     //create connection to the jate database version 1
-    console.lof('GET from database');
+    console.log('GET from database');
     const jateDb = await openDB('jate', 1);
 
     //create a new transaction and the db and the data privilege/permission of read only
