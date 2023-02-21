@@ -1,142 +1,94 @@
-# 19 Progressive Web Applications (PWA): Text Editor
 
-## Your Task
+# Module 19 Challenge: PWA Just Another Text Editor (J.A.T.E.) ![icon](./client/favicon.ico)
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+##  Description:
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+This is a simple single-page text editor that runs in a browser and saves text typed in (after a period of time) in the localStorage and indexedDb. The localStorage and indexedDb serves as some data storage redundancy in case one of the options are not supported by the user's browser. The application can be installed locally, can work online and also deployed in Heroku.
 
-## User Story
+The deployed website is:
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
+https://wirsing-jate.herokuapp.com/
 
-## Acceptance Criteria
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
-```
+##  Table of Contents 
+1. [Installation](#installation)
+2. [Usage and Features](#usage-and-features)  
+3. [Screenshots](#screenshots)
+4. [Contributing](#contributing) 
+5. [Test](#test) 
+6. [Questions](#questions)
+7. [License](#license)
 
-## Mock-Up
+## Installation 
 
-The following animation demonstrates the application functionality:
+LOCAL:
+1. Download files in local folder and unzip.
+2. Open folder in terminal.
+3. Use `npm i` to install the modules needed for the project.
+4. Type `npm run start` to build and run the app.
+5. Open browser and navigate url to `http://localhost:3000/`.
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+HEROKU
+1. Navigate to https://wirsing-jate.herokuapp.com/
 
-The following image shows the application's `manifest.json` file:
+## Usage and Features
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+This app can be deployed locally or accessed online.
 
-The following image shows the application's registered service worker:
+Allows user to create notes or code snippets with or without internet connection.
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+Technologies used are: JS, CSS, HTML, Webpack with service worker/manifest, localStorage, IndexedDB, Node, Express, Babel, CSS-loader, HTML-webpack plugin, code-mirror and many others.
 
-The following image shows the application's IndexedDB storage:
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+## Screenshots
 
-## Grading Requirements
+Locally deployed app:
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+![local deployed](./assets/localhost-jate.png)
 
-This Challenge is graded based on the following criteria:
+HEROKU deployed app:
+![heroku](./assets/heroku-jate.png)
 
-### Technical Acceptance Criteria: 40%
+Install prompt:
+![install](./assets/jate-installation-prompt.png)
 
-* Satisfies all of the above acceptance criteria plus the following:
+Locally installed app:
+![installed](./assets/jate-installed.png)
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+Manifest:
+![manifest](./assets/manifest.png)
 
-  * The application works without an internet connection
+Service Worker:
+![service worker](./assets/service%20worker.png)
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
+IndexedDB
+![idb](./assets/IndexedDB.png)
 
-  * Bundled with webpack
 
-  * Create a service worker with workbox that Caches static assets
+## Contributing 
 
-  * The application should use babel in order to use async / await
+Ask the author and use according to the MIT license.
 
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
+## Test 
 
-  * Can be installed as a Progressive Web Application
+The following are ways to test the app:
+1. Type in text and wait some time before refreshing.
+2. Refresh and the text should be reloaded.
+3. Inspect the localStorage and IndexedDb.
+4. Install the app and test it.
+5. Disconnect app from network and test it.
+ 
+## Questions? 
 
-### Deployment: 32%
+Please contact me through any of the following:
 
-* Application deployed to Heroku at live URL with build scripts
+1. My [Github](https://github.com/iwirsing).
+2. Email: <a href="mailto:ivymolina@gmail.com">ivymolina@gmail.com</a>
 
-* Application loads with no errors
+## License
+    
+The project in covered under the [MIT](https://opensource.org/licenses/MIT) license
 
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
