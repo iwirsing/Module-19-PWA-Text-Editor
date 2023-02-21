@@ -21,7 +21,7 @@ const editor = new Editor();
 
 if (typeof editor === 'undefined') {
   loadSpinner();
-}
+};
 
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
@@ -31,3 +31,10 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 };
+
+if (module.hot) {
+  module.hot.accept((err) => {
+    if (err) {
+      console.error('Cannot apply HMR update.', err);
+    }
+  });}

@@ -31,16 +31,17 @@ export default class {
       console.log('editor.js data: ',data);
       console.log('editor.js header: ', header);
       console.log('editor.js localData: ',localData);
+      this.editor.setValue(data || localData || header);
       //manipulate data and see if it is empty maybe?
-      if (data!==/\s/){
-        this.editor.setValue(data); 
-      }
-      else if (localData!==/\s/){
-        this.editor.setValue(localData);
-      }
-      else{
-      this.editor.setValue(header);
-      }
+      // if (!isEmpty(data)){
+      //   this.editor.setValue(data); 
+      // }
+      // else if (!isEmpty(localData)){
+      //   this.editor.setValue(localData);
+      // }
+      // else{
+      // this.editor.setValue(header);
+      // }
     });
     //upon change on editor save it to localstorage if empty create the key in local storage and store current value
     this.editor.on('change', () => {

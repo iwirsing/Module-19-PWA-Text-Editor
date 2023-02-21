@@ -28,7 +28,7 @@ export const putDb = async (content) =>{
 
     // store and pass content ino the database
     // const request=jateStore.add({edit: content});
-    const request=jateStore.put({id: 1, value: content});
+    const request=jateStore.put({id: 1, content: content});
 
     //confirm the request
     const result = await request;
@@ -61,11 +61,11 @@ export const getDb = async () => {
     
     //checks if there is data or not
     result
-      ? console.log('data retrieved from the database',result.value)
+      ? console.log('data retrieved from the database',result.content)
       : console.log('data not found on the database');
 
     //return value
-    return result?.value;
+    return result?.content;
 
   // }catch (error){
     // console.error('getDb not implemented ', error);
