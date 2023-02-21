@@ -36,12 +36,11 @@ HEROKU
 
 ## Usage and Features
 
-This app can be deployed locally or accessed online.
+This app can be used locally via installation or online via the Heroku link (https://wirsing-jate.herokuapp.com/).
 
-Allows user to create notes or code snippets with or without internet connection.
+It enables the user to generate notes or snippets of code regardless of their connection status.
 
-Technologies used are: JS, CSS, HTML, Webpack with service worker/manifest, localStorage, IndexedDB, Node, Express, Babel, CSS-loader, HTML-webpack plugin, code-mirror and many others.
-
+The technologies used for this were: JavaScript (JS), Cascading Style Sheets (CSS), Hypertext Markup Language (HTML), Webpack with Service Worker/Manifest, localStorage, IndexedDB, Node, Express, Babel, CSS-loader, HTML-webpack plugin, Code-Mirror and many others.
 
 ## Screenshots
 
