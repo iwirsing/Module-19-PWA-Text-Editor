@@ -45,27 +45,23 @@ Technologies used are: JS, CSS, HTML, Webpack with service worker/manifest, loca
 
 ## Screenshots
 
-Locally deployed app:
-
-![local deployed](./assets/localhost-jate.png)
-
-HEROKU deployed app:
-![heroku](./assets/heroku-jate.png)
+Localhost or Heroku J.A.T.E. App:
+![jate](./assets/jate.png)
 
 Install prompt:
-![install](./assets/jate-installation-prompt.png)
+![install](./assets/Install-prompt.png)
 
 Locally installed app:
-![installed](./assets/jate-installed.png)
+![installed](./assets/local-install.png)
 
 Manifest:
 ![manifest](./assets/manifest.png)
 
 Service Worker:
-![service worker](./assets/service%20worker.png)
+![service worker](./assets/sw.png)
 
 IndexedDB
-![idb](./assets/IndexedDB.png)
+![idb](./assets/idb.png)
 
 
 ## Contributing 
