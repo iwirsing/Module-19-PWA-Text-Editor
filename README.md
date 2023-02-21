@@ -6,7 +6,7 @@
 
 ##  Description:
 
-This is a simple single-page text editor that runs in a browser and saves text typed in (after a period of time) in the localStorage and indexedDb. The localStorage and indexedDb serves as some data storage redundancy in case one of the options are not supported by the user's browser. The application can be installed locally, can work online and also deployed in Heroku.
+This is a simple single-page text editor that runs in a browser and saves text typed in (after a period of time) in the localStorage and indexedDb. This data storage redundancy ensures that the application is supported even if one of the options is not available on the user's browser. The application can be installed locally, can work offline and is also deployed in Heroku.
 
 The deployed website is:
 
