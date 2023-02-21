@@ -73,8 +73,8 @@ The following are ways to test the app:
 1. Type in text and wait some time before refreshing.
 2. Refresh and the text should be reloaded.
 3. Inspect the localStorage and IndexedDb.
-4. Install the app and test it.
-5. Disconnect app from network and test it.
+4. Install the app and test it (repeat 1 and 2).
+5. Disconnect app from network and test its offline mode.
  
 ## Questions? 
 
